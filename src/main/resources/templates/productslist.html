@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Product List</title>
+    <title>Products List</title>
 
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
     <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
@@ -13,55 +13,10 @@
 </head>
 
 <body>
-<nav th:insert="fragments/navbar :: nav_fragment" ></nav>
+<header th:insert="fragments/navbar :: nav_fragment" ></header>
 
 <main>
-    <h1 style="margin-top: 80px">Products list</h1>
-
-    <div class="card">
-        <div class="card-header">
-            <h2>Products Link</h2>
-            <a th:href="@{/admin/product}">Add Product</a>
-        </div>
-        <div class="card-body">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Details</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Product Name 1</td>
-                    <td>$10</td>
-                    <td><a th:href="#">Details</a></td>
-                    <td><a th:href="#">Edit</a></td>
-                    <td><a th:href="#">Delete</a></td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card-footer">
-            <td><a th:href="#">Back</a></td>
-        </div>
-    </div>
+    <h1>Products list</h1>
 </main>
 
 
