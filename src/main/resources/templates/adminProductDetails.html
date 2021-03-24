@@ -15,9 +15,23 @@
 <body>
 <header th:insert="fragments/navbar :: nav_fragment"></header>
 
-<main class="container p-3 my-3 bg-primary text-white">
-    <h1>Index</h1>
-    <p class="timestamp" th:text="'Server time: ' + ${date}"></p>
+<main class="container p-3 my-3">
+    <div class="card">
+        <div class="card card-header bg-info text-white">
+            <h2>Product Details</h2>
+        </div>
+
+        <div class="card-body">
+            <p th:text="${productDto.id}"></p>
+            <p th:text="${productDto.name}"></p>
+            <p th:text="'$' + ${productDto.price}"></p>
+            <p th:text="${productDto.productDetailsDto.name}"></p>
+        </div>
+
+        <div class="card-footer">
+            <a th:href="@{/admin/product/}" class="btn btn-danger">Back</a>
+        </div>
+    </div>
 </main>
 
 <footer th:insert="fragments/footer :: footer_fragment"></footer>
